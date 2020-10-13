@@ -148,7 +148,7 @@ example : (token : yourtoken )
 # req.headers : token
 ```
 
-# 4. Farm
+# 5. Farm
 
 Cost to create Farm is 10 golds and 30 foods.
 
@@ -214,7 +214,7 @@ example : (token : yourtoken )
 # req.headers : token
 ```
 
-# 5. Barrack
+# 6. Barrack
 
 Cost to build Barrack is 30 golds dan 30 foods.
 
@@ -280,7 +280,7 @@ example : (token : yourtoken )
 # req.headers : token
 ```
 
-# 5. Attack other user
+# 7. Attack other user
 
 User can attack other user for get the resource on Townhall their.
 
