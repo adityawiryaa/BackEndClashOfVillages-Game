@@ -8,9 +8,9 @@ Feature for register. Schema user is:
  # POST : user/signup
  # req.body
     {
-      username: <user_username>(yourusername)
-      email: <user_email>(wirya@gmail.com)
-      password: <user_password>(yourpassword)
+      username: <user_username>
+      email: <user_email>
+      password: <user_password>
     }
 ```
 
