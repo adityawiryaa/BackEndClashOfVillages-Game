@@ -161,8 +161,6 @@ you can name your farm
 
 Endpoint:
 
-Endpoint:
-
 # A. To create a farm
 
 ```
