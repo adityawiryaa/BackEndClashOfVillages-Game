@@ -1,15 +1,19 @@
 # 1. Register
-feature for register. Schema user is:
+
+Feature for register. Schema user is:
+
 
 ```
- # Endpoint POST : user/signup
+  Endpoint : 
+ # POST : user/signup
  # req.body
     {
-      username: <user_username>(yourusername)  
+      username: <user_username>(yourusername)
       email: <user_email>(wirya@gmail.com)
       password: <user_password>(yourpassword)
     }
 ```
+
 email,password : required.
 
 username and password minlenght :6.
@@ -17,9 +21,12 @@ username and password minlenght :6.
 email must @ (validation).
 
 # 2. Login
-feature login. Schema user is :
+
+Feature login. Schema user is :
+
 ```
- # endpoint POST : user/signin
+ Endpoint: 
+ # POST : user/signin
  # req.body
     {
       email: <user_email>,
@@ -29,11 +36,13 @@ feature login. Schema user is :
 ```
 
 # 3. User
-when user registration, automatically user create Townhall and user will get medal, resource : 100 golds , 100 foods and 0 soldier. User just have one townhall.
+
+When user registration, automatically user create Townhall and user will get medal, resource : 100 golds , 100 foods and 0 soldier. User just have one townhall.
+
 ```
   {
     username: <user_username>
-    townhall: <user_townhall>  
+    townhall: <user_townhall>
     email: <user_email>,
     password: <user_password>,
     resources: {
@@ -46,29 +55,34 @@ when user registration, automatically user create Townhall and user will get med
 ```
 
 # A. To Know One data user
+
 ```
 # Endpoint GET: user/:userID
 # req.headers : token
-example(token : yourtoken )
+Example : (token : yourtoken )
  Output:
  {
-   yourdata
+   Yourdata
  }
 ```
+
 # B. To change or update data user
+
 ```
-# Endpoint PUT : user/userID
-# req.headers : token 
-  example(token : yourtoken )
+Endpoint : 
+# PUT : user/userID
+# req.headers : token
+  example : (token : yourtoken )
 # req.body :
 {
     username: <user_username>
-    townhall: <user_townhall>  
+    townhall: <user_townhall>
 }
 ```
+
 # 4. Market
 
-cost for create Market is 30 golds dan 10 foods.
+Cost for create Market is 30 golds dan 10 foods.
 
 Then market can generate coins / product coins
 
@@ -81,51 +95,62 @@ you can name your market.
 
 Endpoint:
 
-# A. to create a market
+# A. To create a market
+
 ```
 # POST : user/market/:userID
-# req.headers : token 
-example(token : yourtoken)
+# req.headers : token
+example : (token : yourtoken)
 # req.body :
 {
-    namemarket: <user_namemarket>
+    namemarket : <user_namemarket>
 }
 ```
 
-# B. to know user have list market
+# B. To know user have list market
+
 ```
 # GET : user/market/list/:userID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# C. to know one market and know how much coins was generate
+
+# C. To know one market and know how much coins was generate
+
 ```
 # GET : user/market/:marketID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# D. to update and change name market  
+
+# D. To update and change name market
+
 ```
 # PUT : user/market/:marketID
 # req.headers : token
-# req.body : 
+# req.body :
 {
   namemarket : <user_namemarket>
 }
 ```
-# E to delete the market
+
+# E To delete the market
+
 ```
 # DELETE :  user/market/:marketID
 # req.headers : token
 ```
-# F. to collect coins in market and send to your resource
+
+# F. To collect coins in market and send to your resource
+
 ```
 # GET : user/market/:marketID/collect
 # req.headers : token
 ```
+
 # 4. Farm
 
-cost to create Farm is 10 golds and 30 foods. 
+Cost to create Farm is 10 golds and 30 foods.
 
 Farm will produce 1 food/minute.
 
@@ -138,44 +163,54 @@ Endpoint:
 
 Endpoint:
 
-# A. to create a farm
+# A. To create a farm
+
 ```
 # POST : user/farm/:userID
-# req.headers : token 
-example(token : yourtoken)
+# req.headers : token
+example : (token : yourtoken)
 # req.body :
 {
-    namefarm: <user_namefarm>
+    namefarm : <user_namefarm>
 }
 ```
 
-# B. to know user have list farm
+# B. To know user have list farm
+
 ```
 # GET : user/farm/list/:userID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# C. to know one farm and know how much coins was generate
+
+# C. To know one farm and know how much coins was generate
+
 ```
 # GET : user/farm/:farmID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# D. to update and change name farm  
+
+# D. To update and change name farm
+
 ```
 # PUT : user/farm/:farmID
 # req.headers : token
-# req.body : 
+# req.body :
 {
   namefarm : <user_namefarm>
 }
 ```
-# E to delete the farm
+
+# E To delete the farm
+
 ```
 # DELETE :  user/farm/:farmID
 # req.headers : token
 ```
-# F. to collect coins in farm and send to your resource
+
+# F. To collect coins in farm and send to your resource
+
 ```
 # GET : user/farm/:farmID/collect
 # req.headers : token
@@ -183,7 +218,7 @@ example(token : token when login(yourtoken) )
 
 # 5. Barrack
 
-cost to build Barrack is 30 golds dan 30 foods.
+Cost to build Barrack is 30 golds dan 30 foods.
 
 Barrack produce 1 soldier/minute.
 
@@ -194,67 +229,79 @@ you can name your barrack
 
 Endpoint:
 
-# A. to create a barrack
+# A. To create a barrack
+
 ```
 # POST : user/barrack/:userID
-# req.headers : token 
-example(token : yourtoken)
+# req.headers : token
+example : (token : yourtoken)
 # req.body :
 {
-    namebarrack: <user_namebarrack>
+    namebarrack : <user_namebarrack>
 }
 ```
 
-# B. to know user have list barrack
+# B. To know user have list barrack
+
 ```
 # GET : user/barrack/list/:userID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# C. to know one barrack and know how much coins was generate
+
+# C. To know one barrack and know how much coins was generate
+
 ```
 # GET : user/barrack/:barrackID
 # req.headers : token
-example(token : token when login(yourtoken) )
+example : (token : yourtoken )
 ```
-# D. to update and change name barrack  
+
+# D. To update and change name barrack
+
 ```
 # PUT : user/barrack/:barrackID
 # req.headers : token
-# req.body : 
+# req.body :
 {
   namebarrack : <user_namebarrack>
 }
 ```
-# E to delete the barrack
+
+# E. To delete the barrack
+
 ```
 # DELETE :  user/barrack/:barrackID
 # req.headers : token
 ```
-# F. to collect coins in barrack and send to your resource
+
+# F. To collect coins in barrack and send to your resource
+
 ```
 # GET : user/barrack/:barrackID/collect
 # req.headers : token
 ```
 
-# 5. attack other user
-User can attack other user for get the resource on Townhall their. 
+# 5. Attack other user
 
-success will be random,between success and failure on the basis of success is determined based on the number of soldiers sent.
+User can attack other user for get the resource on Townhall their.
+
+Success will be random,between success and failure on the basis of success is determined based on the number of soldiers sent.
 
 If attack success/attacker win :
 
-- attacker: get 5 medal.
-- attacker: get half from golds dan foods on Townhall enemy/defender.
-- defender: soldier will be 0.
+- Attacker: get 5 medal.
+- Attacker: get half from golds dan foods on Townhall enemy/defender.
+- Defender: soldier will be 0.
 
 If attack failed/attacker lose :
 
-- attacker: half medal will be lost (round down, if current 5 will be 2)
-- defender: get 2 medal
-- defender: soldier will lost 20
+- Attacker: half medal will be lost (round down, if current 5 will be 2)
+- Defender: get 2 medal
+- Defender: soldier will lost 20
 
-EndPoint : 
+EndPoint :
+
 ```
 POST : user/:userID/attack/:enemyID
 Request Body:
@@ -262,14 +309,15 @@ Request Body:
     soldierattack : <sendsoldier>
   }
 ```
+
 Notes:
 
 - Soldiers on send, both successful and failed attacks will disappear.
 
-# other feature : 
+# Other feature :
 
 - Townhall just can accommodate 1000 golds, 1000 foods dan 500 soldiers.
 
-- User just  can create maximal 30 barracks.
+- User just can create maximal 30 barracks.
 
 - Users with the number of soldiers on Townhall below 50 cannot be attacked.
